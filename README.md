@@ -18,8 +18,6 @@ All files used to clean the data, and create and populate the database is stored
 ## Web Application
 The web application has been built taking into consideration a node version of 18.20 or higher and is composed of a backend and frontend that must be run simultaneously in order to communicate with each other.
 
-.env files have been included with the variables used on a local environment for ease of use.
-
 ### Backend
 **Stack:**
 - Node.js
