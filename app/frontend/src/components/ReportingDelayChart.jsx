@@ -48,6 +48,7 @@ function ReportingDelayChart() {
             <Legend layout="horizontal" verticalAlign="top" align="center" wrapperStyle={{ paddingBottom: 30 }}/>
             <XAxis
               type="number"
+              label="Average Reporting Delay (days)"
             />
             <YAxis
               type="category"
@@ -60,7 +61,6 @@ function ReportingDelayChart() {
               key="avg_delay_days"
               dataKey="avg_delay_days"
               fill="#5995F8"
-              name="Average Reporting Delay"
               barSize={40}
             />
           </BarChart>

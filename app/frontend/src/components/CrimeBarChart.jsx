@@ -49,7 +49,10 @@ function CrimeBarChart() {
             margin={{ top: 30, right: 30, left: 20, bottom: 80 }}
           >
             <Legend layout="horizontal" verticalAlign="top" align="center" wrapperStyle={{ paddingBottom: 30 }}/>
-            <XAxis type="number" />
+            <XAxis
+              type="number"
+              label="Report Count"
+            />
             <YAxis
               type="category"
               dataKey="crime"
