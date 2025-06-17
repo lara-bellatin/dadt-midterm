@@ -1,5 +1,5 @@
 import React from 'react';
-import CrimeBarChart from './components/crimeBarChart';
+import CrimeBarChart from './components/CrimeBarChart';
 import TimeHeatmap from './components/TimeHeatmap';
 import ReportingDelayChart from './components/ReportingDelayChart';
 
