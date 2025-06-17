@@ -8,6 +8,9 @@ router.get('/', async (req, res) => {
     const params = [];
     let crimePartsFilter = '';
 
+    params.push(parseInt(ageRange[0]));
+    params.push(parseInt(ageRange[1]));
+
     if (crimeParts) {
       let crimePartsArray = typeof(crimeParts) == 'string' ? [crimeParts] : crimeParts
       crimePartsFilter = `\nAND c.crime_part IN (${crimePartsArray.map(() => '?').join(',')})`;
@@ -22,7 +25,7 @@ router.get('/', async (req, res) => {
       JOIN report_crimes rc ON cr.report_number = rc.report_number AND rc.crime_order = 1
       JOIN crimes c ON rc.crime_code = c.crime_code
       WHERE datetime_occurred < date_reported
-      AND cr.victim_age BETWEEN ${parseInt(ageRange[0])} AND ${parseInt(ageRange[1])}
+      AND cr.victim_age BETWEEN ? AND ?
       ${crimePartsFilter}
       GROUP BY crime
       ORDER BY avg_delay_days DESC
