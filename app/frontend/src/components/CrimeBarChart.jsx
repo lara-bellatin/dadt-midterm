@@ -51,7 +51,6 @@ function CrimeBarChart() {
             <Legend layout="horizontal" verticalAlign="top" align="center" wrapperStyle={{ paddingBottom: 30 }}/>
             <XAxis
               type="number"
-              label="Report Count"
             />
             <YAxis
               type="category"
