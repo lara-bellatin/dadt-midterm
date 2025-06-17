@@ -33,7 +33,7 @@ router.get('/', async (req, res) => {
       ${descentFilter}
       GROUP BY c.description, cr.weapon
       HAVING count > 10
-      ORDER BY count DESC
+      ORDER BY count DESC;
     `;
 
     const [rows] = await db.execute(sql, params);
